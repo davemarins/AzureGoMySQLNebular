@@ -1,0 +1,6 @@
+.env
+.env.prod
+*.exe
+vendor/
+.idea/
+.vscode/
