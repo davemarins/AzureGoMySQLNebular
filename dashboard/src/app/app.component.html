@@ -1,0 +1,25 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <button nbButton outline status="primary" (click)="toggle()">
+      <nb-action icon="home-outline"></nb-action>
+    </button>
+  </nb-layout-header>
+  <nb-sidebar>
+    <nb-actions>
+      <nb-action>
+        <button nbButton outline status="success">Login</button>
+      </nb-action>
+    </nb-actions>
+  </nb-sidebar>
+  <nb-layout-column>
+    <div style="text-align:center">
+      <h1>
+        Welcome to {{ this.title }}!
+      </h1>
+    </div>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+  <nb-layout-footer fixed>
+    <h6>Copyright &#0169; Davide Marino 2020</h6>
+  </nb-layout-footer>
+</nb-layout>
