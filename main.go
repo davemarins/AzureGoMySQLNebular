@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"AzureGoMySQLNebular/pkg/auth"
 	"AzureGoMySQLNebular/pkg/routes"
@@ -24,5 +25,5 @@ func main() {
 	http.Handle("/", r)
 	handler := cors.Default().Handler(r)
 	fmt.Println("Starting web server...")
-	log.Fatal(http.ListenAndServe(":8080", handler))
+	log.Fatal(http.ListenAndServe(os.Getenv("GOLANG_PORT"), handler))
 }
