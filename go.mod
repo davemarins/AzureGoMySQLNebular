@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/dpapathanasiou/go-recaptcha v0.0.0-20190121160230-be5090b17804 // indirect
+	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gorilla/mux v1.7.1
 	github.com/jinzhu/gorm v1.9.8
 	github.com/jinzhu/inflection v1.0.0 // indirect

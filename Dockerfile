@@ -13,6 +13,7 @@ FROM alpine:3.10
 RUN apk --no-cache add ca-certificates
 COPY --from=builder main ./
 COPY .env.prod ./
+COPY BaltimoreCyberTrustRoot.crt.pem ./
 RUN mv .env.prod .env
 RUN chmod +x ./main
 ENTRYPOINT ["./main"]
