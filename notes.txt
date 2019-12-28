@@ -1,0 +1,2 @@
+New dashboard:
+https://github.com/akveo/ngx-admin

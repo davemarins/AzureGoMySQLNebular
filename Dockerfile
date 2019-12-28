@@ -12,8 +12,10 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o /main .
 FROM alpine:3.10
 RUN apk --no-cache add ca-certificates
 COPY --from=builder main ./
+# COPY .env.staging ./
 COPY .env.prod ./
 COPY BaltimoreCyberTrustRoot.crt.pem ./
+# RUN mv .env.staging .env
 RUN mv .env.prod .env
 RUN chmod +x ./main
 ENTRYPOINT ["./main"]

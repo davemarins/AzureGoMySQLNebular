@@ -33,6 +33,7 @@ func panicError(err error) {
 }
 
 func SSLConnect() {
+	// use your production configuration for the production db (this case is mysql)
 	rootCertPool := x509.NewCertPool()
 	basePath, err := os.Getwd()
 	panicError(err)
@@ -45,7 +46,6 @@ func SSLConnect() {
 	var connectionString string
 	connectionString = fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?allowNativePasswords=true&tls=custom&parseTime=True", os.Getenv("MYSQL_USERNAME"), os.Getenv("MYSQL_PASSWORD"), os.Getenv("MYSQL_HOST"), os.Getenv("MYSQL_DATABASE"))
 	d, err := gorm.Open("mysql", connectionString)
-	// db, err = sql.Open("mysql", connectionString)
 	panicError(err)
 	db = d
 }
@@ -58,7 +58,7 @@ func LocalConnect() {
 }
 
 func Connect() {
-	if os.Getenv("ENVIRONMENT") == "production" {
+	if os.Getenv("ENVIRONMENT") == "production" || os.Getenv("ENVIRONMENT") == "staging" {
 		SSLConnect()
 	} else if os.Getenv("ENVIRONMENT") == "local" {
 		LocalConnect()
