@@ -1,6 +1,7 @@
 package auth
 
 import (
+	"AzureGoMySQLNebular/pkg/models"
 	"AzureGoMySQLNebular/pkg/utils"
 	"context"
 	"fmt"
@@ -68,6 +69,14 @@ var JwtAuthentication = func(next http.Handler) http.Handler {
 		token, err := jwt.ParseWithClaims(tokenPart, tk, func(token *jwt.Token) (interface{}, error) {
 			return []byte(utils.GetJWTSecret()), nil
 		})
+
+		if strings.Contains(requestPath, "/administrator/") && tk.Role != string(models.ADMIN) {
+			response = utils.Message(false, "You must be an administrator in order to call this API")
+			w.WriteHeader(http.StatusForbidden)
+			w.Header().Add("Content-Type", "application/json")
+			utils.Respond(w, response)
+			return
+		}
 
 		// Malformed token or Token is invalid, maybe not signed on this server
 		if err != nil || !token.Valid {

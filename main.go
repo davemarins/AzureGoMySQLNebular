@@ -22,6 +22,7 @@ func main() {
 	routes.RegisterUserRoutes(r)
 	routes.RegisterArticleRoutes(r)
 	routes.RegisterSubscribersRoutes(r)
+	routes.RegisterAdministratorRoutes(r)
 	http.Handle("/", r)
 	handler := cors.Default().Handler(r)
 	fmt.Println("Starting web server...")

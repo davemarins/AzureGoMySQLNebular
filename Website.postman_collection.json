@@ -19,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"info@davidemarino.io\",\n    \"password\": \"Computer1!\",\n    \"totp_code\": \"526758\"\n}"
+					"raw": "{\n    \"email\": \"pinco.pallino@gmail.com\",\n    \"password\": \"Computer1!\",\n    \"totp_code\": \"263001\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/public/user/login/",
@@ -45,17 +45,16 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhdmlkZW1hcmlubzA1MDhAZ21haWwuY29tIiwicm9sZSI6IkFkbWluIiwiZXhwaXJlc19hdCI6MTU3MDUzMDEwNCwicmVmcmVzaF9hdCI6MTU3MDUyODMwNCwiZXhwIjoxNTcwNTMwMTA0LCJqdGkiOiJkYXZpZGVtYXJpbm8wNTA4QGdtYWlsLmNvbSIsImlhdCI6MTU3MDUyNjUwNCwiaXNzIjoic2ltcGxlLVJFU1QifQ.CSzUkGcEyeGtk6RiHLI2GlYtDRE06qbmUWjbKNfQbhPA5jK4Ii2vXTjT0ngB5DWUfD7dTcmWLiceJMdRjTYhfg",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImluZm9AZGF2aWRlbWFyaW5vLmlvIiwicm9sZSI6IkFkbWluIiwiZXhwaXJlc19hdCI6MTU3NzQ1NzA5NywicmVmcmVzaF9hdCI6MTU3NzQ1NTI5NywiZXhwIjoxNTc3NDU3MDk3LCJqdGkiOiJpbmZvQGRhdmlkZW1hcmluby5pbyIsImlhdCI6MTU3NzQ1MzQ5N30.5j67tkY6pIBRjpVP4GzrgiXtAdyKV6-p-6Q0d06GawQjJx7aqd4BGdxyd3ZNs0vgNDOZKCtToVnB0KgtktOxXg",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/user/all/",
+					"raw": "http://localhost/user/all/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
 					"path": [
 						"user",
 						"all",
@@ -78,13 +77,13 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImluZm9AZGF2aWRlbWFyaW5vLmlvIiwicm9sZSI6IkFkbWluIiwiZXhwaXJlc19hdCI6MTU3NzI5MDIxMywicmVmcmVzaF9hdCI6MTU3NzI4ODQxMywiZXhwIjoxNTc3MjkwMjEzLCJqdGkiOiJpbmZvQGRhdmlkZW1hcmluby5pbyIsImlhdCI6MTU3NzI4NjYxM30.YJYSz6MblPvN7Y1UaufgIE_gPFZ-HcF-to0m-AYgo7mAMM_gb4G3jj5RuQAnjlWk2FAe1U_ZCNzwPfDnMtGC1w",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImluZm9AZGF2aWRlbWFyaW5vLmlvIiwicm9sZSI6IkFkbWluIiwiZXhwaXJlc19hdCI6MTU3ODIyMDY0OCwicmVmcmVzaF9hdCI6MTU3ODIxODg0OCwiZXhwIjoxNTc4MjIwNjQ4LCJqdGkiOiJpbmZvQGRhdmlkZW1hcmluby5pbyIsImlhdCI6MTU3ODIxNzA0OH0.1VkZW0JUvulSH6dowDNsITAzE8X6wJ_yDkv9Of9zpI3qvPqCVrjyM5bkBS-AIrHHDAqScio09bxHq40tIhA4NA",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"first_name\": \"Davide\",\n\t\"last_name\": \"Marino\",\n\t\"email\": \"info@davidemarino.io\",\n\t\"password\": \"Computer1!\",\n\t\"secret_totp\": \"YDIM6L6XU4DFGZQW\",\n\t\"role\": \"Admin\"\n}"
+					"raw": "{\n\t\"first_name\": \"Pinco\",\n\t\"last_name\": \"Pallino\",\n\t\"email\": \"pinco.pallino@gmail.com\",\n\t\"password\": \"Computer1!\",\n\t\"secret_totp\": \"YDIM6L6XU4DFGZQW\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/user/",
@@ -603,6 +602,150 @@
 						"subscriber",
 						"page",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/public/status/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"public",
+						"status",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Administrators",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJleHBpcmVzX2F0IjoxNTc4MjIyOTUzLCJyZWZyZXNoX2F0IjoxNTc4MjIxMTUzLCJleHAiOjE1NzgyMjI5NTMsImp0aSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwiaWF0IjoxNTc4MjE5MzUzfQ.iMIsTPtAgRhdzPxhc9gveAaot8LqJx6n6-DTvKAWJMCfCSU38TWpAE6k9BXPwap_8h7AK5z8bWZZNVwOEmLvKQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/administrator/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"administrator",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Administrator",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJleHBpcmVzX2F0IjoxNTc4MjIyOTUzLCJyZWZyZXNoX2F0IjoxNTc4MjIxMTUzLCJleHAiOjE1NzgyMjI5NTMsImp0aSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwiaWF0IjoxNTc4MjE5MzUzfQ.iMIsTPtAgRhdzPxhc9gveAaot8LqJx6n6-DTvKAWJMCfCSU38TWpAE6k9BXPwap_8h7AK5z8bWZZNVwOEmLvKQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/administrator/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"administrator",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grant Administrator Status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJleHBpcmVzX2F0IjoxNTc4MjIyOTUzLCJyZWZyZXNoX2F0IjoxNTc4MjIxMTUzLCJleHAiOjE1NzgyMjI5NTMsImp0aSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwiaWF0IjoxNTc4MjE5MzUzfQ.iMIsTPtAgRhdzPxhc9gveAaot8LqJx6n6-DTvKAWJMCfCSU38TWpAE6k9BXPwap_8h7AK5z8bWZZNVwOEmLvKQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/administrator/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"administrator",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revoke Administrator Status",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJleHBpcmVzX2F0IjoxNTc4MjIyOTUzLCJyZWZyZXNoX2F0IjoxNTc4MjIxMTUzLCJleHAiOjE1NzgyMjI5NTMsImp0aSI6InBpbmNvLnBhbGxpbm9AZ21haWwuY29tIiwiaWF0IjoxNTc4MjE5MzUzfQ.iMIsTPtAgRhdzPxhc9gveAaot8LqJx6n6-DTvKAWJMCfCSU38TWpAE6k9BXPwap_8h7AK5z8bWZZNVwOEmLvKQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/administrator/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"administrator",
+						"2"
 					]
 				}
 			},

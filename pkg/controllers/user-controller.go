@@ -79,9 +79,12 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 	if updateUser.Password != "" {
 		userDetails.Password = updateUser.Password
 	}
-	if updateUser.Role != "" {
-		userDetails.Role = updateUser.Role
-	}
+	// Role cannot be modified, only with /administrator/{userId} REST API
+	/*
+		if updateUser.Role != "" {
+			userDetails.Role = updateUser.Role
+		}
+	*/
 	db.Save(&userDetails)
 	result, _ := json.Marshal(userDetails)
 	w.WriteHeader(http.StatusOK)

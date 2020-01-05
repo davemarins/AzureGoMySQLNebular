@@ -35,11 +35,7 @@ func (u *User) NewUser() *User {
 	u.FirstName = policy.Sanitize(u.FirstName)
 	u.LastName = policy.Sanitize(u.LastName)
 	u.Secret = policy.Sanitize(u.Secret)
-	tempRole := Role(u.Role)
-	if tempRole == "" {
-		return nil
-	}
-	u.Role = string(tempRole)
+	u.Role = string(USER)
 	pwdByte := []byte(u.Password)
 	hash, err := bcrypt.GenerateFromPassword(pwdByte, bcrypt.DefaultCost)
 	if err != nil {
@@ -73,4 +69,16 @@ func DeleteUserById(id int64) User {
 	var user User
 	dbUserClient.Where("id = ?", id).Delete(user)
 	return user
+}
+
+func GetAllAdministrator() []User {
+	var admins []User
+	dbUserClient.Where("role = \"Admin\"").Find(&admins)
+	return admins
+}
+
+func GetAdministratorById(id int64) (*User, *gorm.DB) {
+	var admin User
+	db := dbUserClient.Where("id = ?", id).Where("role = \"Admin\"").Find(&admin)
+	return &admin, db
 }
